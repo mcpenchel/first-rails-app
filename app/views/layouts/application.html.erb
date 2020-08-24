@@ -10,6 +10,23 @@
   </head>
 
   <body>
+    <h1>Botafogo's official website</h1>
+
+    <ul>
+      <li>
+        <!-- lt and tab does the trick -->
+        <%= link_to "Homepage", homepage_path %>
+      </li>
+      <li>
+        <!-- <a href="/about">About us</a> -->
+        <%= link_to "About us", about_path %>
+      </li>
+      <li>
+        <!-- <a href="/contact_us">Contact us</a> -->
+        <%= link_to "Contact us", contact_path %>
+      </li>
+    </ul>
+
     <%= yield %>
   </body>
 </html>

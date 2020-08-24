@@ -1,0 +1,24 @@
+<h2>Take a look at our star players:</h2>
+
+<!-- THIS IS SUPER IMPORTANT PEOPLE!!! -->
+<!-- YOU'RE GONNA USE "icecream brackets" EVERY DAY -->
+<p><% Time.now %></p> <!-- does not print -->
+<p><%= Time.now.strftime('%d of %B, %Y - %H:%M:%S') %></p> <!-- prints -->
+
+<!-- shortcut for icecream brackets: pe and press tab -->
+
+<!-- form action is actually the url it will go after we submit -->
+
+<%# text = params[:player].present? ? params[:player] : "Type a name..." %>
+
+<form action="/homepage">
+  <input type="text" name="player" placeholder="Type a name..." value="<%= params[:player] %>">
+  <!-- <input type="text" name="age"> -->
+  <input type="submit">
+</form>
+
+<ul>
+  <% @players.each do |player| %>
+    <li><%= player.upcase %></li>
+  <% end %>
+</ul>
